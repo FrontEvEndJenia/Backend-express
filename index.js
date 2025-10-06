@@ -39,10 +39,10 @@ app.delete('/:id', async (req, res) => {
 })
 
 app.put('/:id', async (req, res) => {
+	console.log('object')
 	await updateNote(req.params.id, req.body.title)
-
 	res.render('index', {
-		title: 'My Notes by Express+ejs',
+		title: 'Express App',
 		notes: await getNotes(),
 		created: false,
 	})

@@ -28,6 +28,7 @@ async function removeNoteById(remove_id) {
 	return updatedNotes
 }
 async function updateNote(update_id, newTitle) {
+	console.log('update_id', update_id, 'newTitle', newTitle)
 	const notes = await getNotes()
 	const updatedNotes = notes.map((note) => {
 		if (note.id === String(update_id)) {
